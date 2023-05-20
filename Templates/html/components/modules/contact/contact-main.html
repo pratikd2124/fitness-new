@@ -1,0 +1,110 @@
+<main>
+   <!--? Hero Start -->
+   <div class="slider-area2">
+      <div class="slider-height2 d-flex align-items-center">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="hero-cap hero-cap2 pt-70 text-center">
+                     <h2>Contact Us</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Hero End -->
+   <!--?  Contact Area start  -->
+   <section class="contact-section">
+      <div class="container">
+
+         <div class="row">
+            
+            <section class="contact-form-main">
+               <div class="container">
+                   <div class="row justify-content-start">
+                       <div class="col-xl-7 col-lg-7">
+                           <div class="form-wrapper">
+                               <!--Section Tittle  -->
+                               <div class="form-tittle">
+                                   <div class="row ">
+                                       <div class="col-lg-11 col-md-10 col-sm-10">
+                                           <div class="section-tittle">
+                                               <h2>Feel Free to contact with us!</h2>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <!--End Section Tittle  -->
+                               <form id="contact-form" action="{% url 'contact' %}" method="POST">
+                                 {% csrf_token %}
+                                   <div class="row">
+                                       <div class="col-lg-6 col-md-6">
+                                           <div class="form-box user-icon mb-30">
+                                               <input type="text" name="name" placeholder="Name">
+                                           </div>
+                                       </div>
+                                       <div class="col-lg-6 col-md-6">
+                                           <div class="form-box email-icon mb-30">
+                                               <input type="text" name="email" placeholder="Email">
+                                           </div>
+                                       </div>
+                                       
+                                       <div class="col-lg-6 col-md-6">
+                                           <div class="form-box subject-icon mb-30">
+                                               <input type="text" name="phone" placeholder="Phone">
+                                           </div>
+                                       </div>
+                                       <div class="col-lg-12">
+                                           <div class="form-box message-icon mb-65">
+                                               <textarea name="message" id="message" placeholder="Message" style="font-size:medium!important"></textarea>
+                                           </div>
+                                           <div class="submit-info">
+                                               <button class="btn" type="submit">Send Message</button>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </form>
+                           </div>
+                       </div>
+                       <div class="col-lg-3 offset-lg-1 mt-150">
+                        <div class="media contact-info">
+                           <span class="contact-info__icon"><i class="ti-home"></i></span>
+                           <div class="media-body">
+                              <h3>Akhada Unisex Fitness Zone</h3>
+                              <p>Sukhshanti Society Plot no A-7 Sector 20
+                                near Welcom Restaurant
+                                Nerul West
+                                Navi Mumbai, Maharashtra 400706
+                                India
+                                </p>
+                           </div>
+                        </div>
+                        <div class="media contact-info">
+                           <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                           <div class="media-body">
+                              <h3>9594575707</h3>
+                              <p>Mon to Sat 9am to 6pm</p>
+                           </div>
+                        </div>
+                        <div class="media contact-info">
+                           <span class="contact-info__icon"><i class="ti-email"></i></span>
+                           <div class="media-body">
+                              <h3>akhadafitness@gmail.com</h3>
+                              <p>Send us your query anytime!</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+                   </div>
+
+               </div>
+               <!-- contact left Img-->
+               {% include 'components/modules/contact/map.html' %}
+           </section>
+
+            
+   </section>
+   <!-- Contact Area End -->
+</main>

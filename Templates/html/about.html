@@ -1,0 +1,26 @@
+<!-- This page extends the 'link.html' template, which contains the overall page structure and links -->
+{% extends 'connection/link.html' %}
+
+<!-- Title of the Page ================================== -->
+{% block title %} <title>Health & Fitness | About</title> {% endblock title %}
+
+<!-- Title of the Page ends ============================= -->
+
+{% block content %}
+<body>
+
+<!-- Header & Navigation ================================ -->
+{% include 'components/header.html' %}
+<!-- Header & Navigation End ============================ -->
+
+
+<!-- About Us Component ================================= -->
+{% include 'components/modules/about/about-main.html' %}
+<!-- About Us Component Ends ============================ -->
+
+<!-- Footer & Modals ==================================== -->
+{% include 'components/footer.html' %}
+<!-- Footer & Modals Ends =============================== -->
+
+</body>
+{% endblock content %}

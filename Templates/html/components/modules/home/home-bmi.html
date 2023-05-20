@@ -1,0 +1,61 @@
+<section class="wantToWork-area w-padding section-bg" style="background:#1b213d;">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10">
+                
+                <div class="wantToWork-caption" >
+                    <h2>BMI CALCULATOR</h2>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <p style="color: white!important;">Height in meters:</p>
+                        <input class="form-control-lg height-input-field col-6" type="text">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-8 mb-2">
+                        <div class="form-group">
+                            <p style="color: white!important;">Weight in kilograms:</p>
+                            <input class="form-control-lg col-6 weight-input-field" type="text">
+                        </div>
+                    </div>
+                    
+                    <button class="calculate btn"> Calculate</button>
+                </div>
+                
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-3">
+                <div class="wantToWork-caption">
+                    <h1 class="h1" style="color: white!important;"> Get Result here</h1>
+                    <h3 class="result p-2" style="color: white!important;font-size:4rem;"></h3>
+                    <p class="result-statement" style="color: white!important;font-size:2.5rem;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var heightInput = document.querySelector(".height-input-field");
+        var weightInput = document.querySelector(".weight-input-field");
+        var calculateButton = document.querySelector(".calculate");
+        var result = document.querySelector(".result");
+        var statement = document.querySelector(".result-statement");
+        var BMI, height, weight;
+
+        calculateButton.addEventListener("click", ()=>{
+            
+            height = heightInput.value;
+            weight = weightInput.value;
+            BMI = weight/(height**2); 
+            result.innerText = "Your BMI is : " + BMI.toFixed(2);
+
+            if(BMI < 18.5){
+                statement.innerText = "Your BMI falls within the underweight range";    
+            }else if((BMI > 18.5) && (BMI <= 24.9)){
+                statement.innerText = "Your BMI falls within the normal or healthy weight range";
+            }else if((BMI >= 25) && (BMI <= 29.9 )){
+                statement.innerText = "Your BMI falls within the overweight range";
+            }else{
+                statement.innerText = "Your BMI falls within the obese range";
+            }
+        });
+    </script>
+</section>
